@@ -1,0 +1,127 @@
+.info {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    background-color: #181818;
+    color: #B9B9B9;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info img{
+    border: 3px solid gainsboro;
+    width: 148px;
+    height: 194px;
+}
+.info .title {
+    color: #0295F6;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 8px;
+}
+#page-info .info .poster {
+    width: 145px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#page-info .info .name2 {
+    color: #666;
+    padding: 0 8px 8px;
+}
+#page-info .info .fr{
+    margin-left: 168px;
+    margin-bottom: 0px;
+}
+#page-info .info .name2 h3 {
+    font-size: 12px;
+    display: inline;
+    font-weight: 400;
+    margin-right: 5px;
+}
+.dinfo {
+    overflow: hidden;
+    color: #B9B9B9;
+    background-color: #232323;
+    display: flex;
+    padding: 0px !important;
+    font-weight: 700px;
+}
+.col1 {
+    float: left;
+    width: 50%;
+    padding: 10px 10px 0px 10px;
+}
+.col2 {
+    float: right;
+    width: 30%;
+    background-color: #2e2e2e;
+    padding: 10px 10px 0px 10px;
+}
+li {
+    margin-bottom: .5rem;
+    margin-left: 0;
+}
+
+.status1{
+    color: red !important;
+}
+#page-info .info ul {
+    list-style: none;
+}
+.dinfo ul li a{
+    color: #eee;
+    text-decoration: none;
+}
+
+.groups-btn{
+    position: relative;
+}
+.btn-watch{
+    background-image: url(../images/btn_watch.png);
+    width: 152px;
+    height: 43px;
+    display: block;
+    margin-top: 10px;
+    /* margin-bottom: 10px !important; */
+}
+.share{
+    background-image: url(../images/shareFb.png);
+    width: 100px;
+}
+/* .detail{
+    color: #bebebe;
+    font-size: 13px;
+    background-color: #181818;
+    padding: 10px;
+} */
+/* .tab{
+    height: 34px;
+    width: 100px;
+} */
+
+.blocktitle .icon {
+    margin-top: 10px;
+    margin-right: 3px;
+}
+.comment img{
+    width: 20px;
+    height: 20px;
+    display: inline;
+}
+.icon-comment {
+    height: 16px;
+    width: 16px;
+    color: white !important;
+}
+.content {
+    padding: 10px;
+    line-height: 18px;
+    background: #232323;
+    color: #bebebe;
+}
+.blockcomment input#cmt{
+    height: 60px;
+    width: 100%;
+}

@@ -1,0 +1,257 @@
+*{
+    margin: 0px ;
+    padding: 0px;
+}
+body{
+    width: 82%;
+    margin: auto !important;
+    background-color: black !important;
+    position: relative;
+    color: white !important;
+}
+
+/************ LIST FILM ***********/
+.block{
+    background-color: black !important;
+    padding: 0px;
+    height: auto;
+}
+.breadcrumbs .item {
+    background: url(../images/breadcrumb_separator.png) right center no-repeat;
+    padding: 0 20px 0 10px;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.breadcrumbs .item.last-child, .breadcrumbs .item:last-child {
+    background-image: none;
+}
+.blocktitle a, h2{
+    color: white;
+    text-decoration: none;
+}
+.blocktitle{
+    height: 40px;
+    line-height: 40px;
+}
+/*--- filter ---*/
+#page-list .filter {
+    font-size: 13px;
+    border-top: 1px solid #363636;
+    overflow: hidden;
+    clear: both;
+    height: 100px;
+    background-color: rgb(35, 35, 35);
+}
+#page-list .filter .item {
+    float: left;
+    margin-left: 6px;
+    font-weight: 700;
+    color: #959595;
+    height: 40px;
+    line-height: 40px;
+}
+#page-list .filter .item select {
+    background: #161616;
+    border: 1px solid #393939;
+    color: #949494;
+    height: 25px;
+    padding: 3px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.btn1{
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+.list-film .inner {
+    width: 25%;
+    height: 30%;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+.inner a{
+    color: #0094fc;
+    font-family: tahoma;
+    font-size: 12px;
+    text-decoration: none;
+}
+.inner img{
+    display: block;
+    height: 95%;
+    line-height: 118px;
+    text-align: center;
+    width: 98%;
+}
+.inner:hover {
+    background: #222;
+}
+.name2{
+    color: #8b8b8b;
+}
+.status {
+    background: #484848;
+    color: #FFF;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    left: 0;
+    padding: 2% 2%;
+    position: absolute;
+    top: 169px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.status-hot{
+    padding: 0px 5px;
+    right: 12%;
+    top: 5%;
+}
+
+/************ info *********/
+.info {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    background-color: #181818;
+    color: #B9B9B9;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info img{
+    border: 3px solid gainsboro;
+    width: 148px;
+    height: 194px;
+}
+.info .title {
+    color: #0295F6;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 8px;
+}
+#page-info .info .poster {
+    width: 145px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#page-info .info .name2 {
+    color: #666;
+    padding: 0 8px 8px;
+}
+#page-info .info .fr{
+    margin-left: 168px;
+    margin-bottom: 0px;
+}
+#page-info .info .name2 h3 {
+    font-size: 12px;
+    display: inline;
+    font-weight: 400;
+    margin-right: 5px;
+}
+.dinfo {
+    overflow: hidden;
+    color: #B9B9B9;
+    background-color: #232323;
+    display: flex;
+    padding: 0px !important;
+    font-weight: 700px;
+}
+.col1 {
+    float: left;
+    width: 50%;
+    padding: 10px 10px 0px 10px;
+}
+.col2 {
+    float: right;
+    width: 30%;
+    background-color: #2e2e2e;
+    padding: 10px 10px 0px 10px;
+}
+li {
+    margin-bottom: .5rem;
+    margin-left: 0;
+}
+
+.status1{
+    color: red !important;
+}
+#page-info .info ul {
+    list-style: none;
+}
+.dinfo ul li a{
+    color: #eee;
+    text-decoration: none;
+}
+
+.groups-btn{
+    position: relative;
+}
+.btn-watch{
+    background-image: url(../images/btn_watch.png);
+    width: 152px;
+    height: 43px;
+    display: block;
+    margin-top: 10px;
+    /* margin-bottom: 10px !important; */
+}
+.share{
+    background-image: url(../images/shareFb.png);
+    width: 100px;
+}
+.detail{
+    color: #bebebe;
+    font-size: 13px;
+    background-color: #181818;
+    padding: 10px;
+    /* margin-top:10px; */
+}
+.tab{
+    height: 34px;
+    width: 100px;
+}
+.blocktitle .icon {
+    margin-top: 10px;
+    margin-right: 3px;
+}
+.comment img{
+    width: 20px;
+    height: 20px;
+    display: inline;
+}
+.icon-comment {
+    height: 16px;
+    width: 16px;
+    color: white !important;
+}
+.content {
+    padding: 10px;
+    line-height: 18px;
+    background: #232323;
+    color: #bebebe;
+}
+.blockcomment input#cmt{
+    height: 60px;
+    width: 100%;
+}
+
+
+
+
+.footer {
+    position:fixed;bottom:0;
+
+    width:100%;
+    display:block;
+}

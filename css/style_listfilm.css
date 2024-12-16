@@ -1,0 +1,88 @@
+
+.block{
+  background-color: black !important;
+  padding: 0px;
+  height: auto;
+}
+.breadcrumbs .item {
+  background: url(../images/breadcrumb_separator.png) right center no-repeat;
+  padding: 0 20px 0 10px;
+  float: left;
+  color: white;
+  text-transform: uppercase;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.breadcrumbs .item.last-child, .breadcrumbs .item:last-child {
+  background-image: none;
+}
+.blocktitle a, h2{
+  color: white;
+  text-decoration: none;
+}
+.blocktitle{
+  height: 40px;
+  line-height: 40px;
+}
+/*--- filter ---*/
+#page-list .filter {
+  font-size: 13px;
+  border-top: 1px solid #363636;
+  overflow: hidden;
+  clear: both;
+  padding: 1%;
+  background-color: rgb(35, 35, 35);
+}
+#page-list .filter .item {
+  float: left;
+  margin-left: 6px;
+  font-weight: 700;
+  color: #959595;
+  height: 40px;
+  line-height: 40px;
+}
+#page-list .filter .item select {
+  background: #161616;
+  border: 1px solid #393939;
+  color: #949494;
+  height: 25px;
+  padding: 3px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.btn1{
+  display: inline-block;
+  clear: both;
+  padding-left: 9%;
+  text-align: center;
+}
+#locphim{
+    padding: 10px;
+    border: 2px solid green;
+    border-radius: 1px;
+}
+/* sign in form */
+#signIn{
+    /* display: none; */
+    width: 84%;
+    background-color: #323232;
+    color: white;
+    padding: 10px;
+
+}
+#signIn .form-control{
+    background-color: #232323;
+    color: white;
+    border: 1px solid black;
+    margin-bottom: 10px ;
+
+}
+
+
+/* sign up form */
+#signUpForm .form-control {
+    background-color: #323232;
+    color: white;
+}

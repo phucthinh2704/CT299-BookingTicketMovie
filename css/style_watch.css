@@ -1,0 +1,276 @@
+/* *{
+    margin: auto;
+} */
+body{
+    width: 82%;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    /* font-size: 11px; */
+}
+
+#header, #nav, #nav2, #body_wrap, #content, #sidebar, #footer{
+    border: 1px solid black;
+}
+#header{
+    height: 63px;
+}
+#nav{
+    height: 39px;
+}
+#nav2{
+    height: 30px;
+}
+#body_wrap{
+    min-height: 1000px;
+}
+
+#movie_hot{
+    height: 400px;
+}
+
+#footer{
+    height:135px;
+}
+
+
+
+
+
+/*--------------------------- watch film -------------------------------*/
+a{
+    color: white !important;
+}
+
+#content{
+    background-color: #181818;
+}
+#detail, #server-list, #comment, #not-seen{
+    background-color: #232323;
+}
+
+
+
+
+/* movie-hot */
+#movie-hot{
+    z-index: 9;
+}
+.box-wrap{
+    padding: 5px 10px;
+}
+.name a{
+    font-weight: bold;
+}
+.name a:hover{
+    color: wheat;
+    text-decoration: none;
+}
+.status-hot{
+    padding: 0px 5px;
+    right: 12%;
+    top: 5%;
+}
+.overlay-name{
+    background-color: black;
+    width: 90%;
+    bottom: 5%;
+    opacity: 0.7;
+}
+
+
+
+
+/* location */
+.cur-location{
+    text-transform: uppercase;
+}
+.cur-location ol{
+    background-color:#181818 !important;
+}
+.cur-location .breadcrumb-item.active{
+    color: navajowhite;
+}
+
+nav#breadcrumb {
+  width: 80%;
+}
+
+ol.breadcrumb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+}
+
+ol li.breadcrumb-item {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+
+/* share */
+.share{
+    background-image: linear-gradient(#3F3F3F, #323232);
+    padding: 5px 10px;
+    width: 100%;
+}
+.share .btn{
+    padding: 2px 5px;
+    margin: 0px auto;
+    background-image: linear-gradient(#232323, #121212);
+    border: none;
+    border-radius: 15px;
+    font-size:11px;
+}
+
+.share .share_fb{
+    background-image: none;
+    background-color: rgb(59, 89, 152) !important;
+    color: white;
+}
+
+
+/* detail */
+#detail, #server-list, #comment{
+    border-radius: 8px;
+    margin: 20px 0px;
+}
+#detail>.row{
+    padding: 10px;
+}
+#detail fieldset, legend{
+    border: 1px solid white;
+    padding: 1px 10px;
+    margin: 5px;
+    font-size: 12px;
+}
+legend{
+    font-size: 14px;
+    width: 40%;
+}
+
+
+/* server-list */
+#server-list{
+  padding: 10px;
+  margin-bottom: -5px;
+}
+
+#server-list .row {
+  margin: 1%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-sm-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-sm-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.seat{
+    padding: 5px 10px;
+    margin: 2px;
+    color: rgb(34, 33, 33)!important;
+}
+.seat:hover{
+    text-decoration: none;
+    color: white!important;
+}
+
+#comment{
+    padding: 8px 20px ;
+}
+#SortedBy{
+    width: 50%;
+}
+
+
+
+/* comment */
+.input_cmt{
+    width: 100%;
+    border: none;
+    min-height: 60px;
+
+}
+.post{
+    margin: 10px;
+    width: 10%;
+    border-radius: 5px;
+    display: none;
+}
+
+
+/* side bar */
+.hot{
+    background-color: #232323;
+}
+#pills-day ul{
+    list-style: none;
+    padding: 0px;
+}
+.number_top{
+    width: 25px;
+    border: 1px solid white;
+    color: blue;
+    text-align: center;
+}
+.views{
+    color: aliceblue;
+    font-size: 80%;
+}
+
+
+
+
+/*--------------------------- Sign Up -------------------------------*/
+
+
+/* sign in form */
+#signIn{
+    /* display: none; */
+    width: 84%;
+    background-color: #323232;
+    color: white;
+    padding: 10px;
+
+}
+#signIn .form-control{
+    background-color: #232323;
+    color: white;
+    border: 1px solid black;
+    margin-bottom: 10px ;
+
+}
+
+
+/* sign up form */
+#signUpForm .form-control {
+    background-color: #323232;
+    color: white;
+}

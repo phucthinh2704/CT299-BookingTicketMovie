@@ -1,0 +1,261 @@
+body {
+  color: #000;
+  border: 1px solid #dfdfdf
+}
+
+#logo-container .logo-container-logos-wraper {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: rgb(255, 255, 255)
+}
+
+body.no-frame .offer-container .border-container, body.no-frame .offer-container:hover .border-container, body.no-frame #offer-enlarger, body.no-frame .galler-first-offer-cotainer {
+  border: 0 solid #fff !important
+}
+
+body.no-frame.gallery .offer-container .border-container.offer-jumping-frame, body.no-frame.gallery .offer-container:hover .border-container.offer-jumping-frame, body.no-frame.mobile .offer-container .border-container.offer-jumping-frame, body.no-frame.mobile .offer-container:hover .border-container.offer-jumping-frame, body.no-frame.jumpingframe .offer-container .border-container.offer-jumping-frame, body.no-frame.jumpingframe .offer-container:hover .border-container.offer-jumping-frame {
+  border-color: #189eff !important;
+  border-width: 2px !important
+}
+
+body.no-frame .offer-container, body.no-frame .galler-first-offer-cotainer {
+  outline: 1px solid #eee;
+  outline-width: 1px
+}
+
+body.not-prop.jumpingframe #offer0.offer-container .border-container:after, body.not-prop.jumpingframe #offer1.offer-container .border-container:after {
+  -webkit-animation-name: specialanim;
+  -webkit-animation-duration: 2s;
+  animation-name: specialanim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite
+}
+
+body.not-prop.jumpingframe #offer1.offer-container .border-container:after {
+  animation-delay: 1s
+}
+
+body.not-prop.jumpingframe:hover #banner-container .offer-container .border-container:after, body.end-of-animation #banner-container .offer-container .border-container:after {
+  -webkit-animation-name: stop;
+  -webkit-animation-duration: 0s;
+  animation-name: stop;
+  animation-duration: 0s;
+  opacity: 0 !important
+}
+
+body.not-prop.jumpingframe:hover #banner-container .offer-container:hover .border-container:after {
+  opacity: 1 !important
+}
+
+body.not-prop.jumpingframe .offer-container .border-container:after {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border: 0 solid #fff !important;
+  border-color: #189eff !important;
+  border-width: 2px !important
+}
+
+@-webkit-keyframes specialanim {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 0
+  }
+  51% {
+    opacity: 1
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes specialanim {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 0
+  }
+  51% {
+    opacity: 1
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+body.vertical.no-frame #offer-enlarger {
+  border-bottom: 1px solid #fff !important
+}
+
+body.horizontal.no-frame #offer-enlarger {
+  border-left: 1px solid #fff !important
+}
+
+#banner-container {
+  background: rgb(255, 255, 255)
+}
+
+#banner-container {
+  -webkit-box-shadow: inset none;
+  -moz-box-shadow: inset none;
+  box-shadow: inset none
+}
+
+.shadow-container {
+  -webkit-box-shadow: inset none;
+  -moz-box-shadow: inset none;
+  box-shadow: inset none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0
+}
+
+.border-container {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 10010;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid #eee
+}
+
+.background-container {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: .5px;
+  left: .5px;
+  background: rgb(255, 255, 255);
+  z-index: 0
+}
+
+.offer-container {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: none
+}
+
+.offer-enlarger-image {
+  background: rgb(255, 255, 255)
+}
+
+.offer-loader {
+  background: #fff
+}
+
+.offer-hover-container {
+  background: rgba(24, 158, 255, .7)
+}
+
+.offer-price-container span, .offer-enlarger-price span {
+  color: #090;
+  text-shadow: none
+}
+
+.offer-enlarger-price span, .offer-enlarger-price p {
+  color: #090
+}
+
+.offer-price-container>p {
+  background: rgb(255, 255, 255)
+}
+
+.offer-oldprice-container>p {
+  background: rgb(255, 255, 255)
+}
+
+.offer-oldprice-container span, .offer-enlarger-oldprice span, .offer-enlarger-oldprice p {
+  color: #666;
+  text-shadow: none
+}
+
+.offer-enlarger-oldprice span, .offer-enlarger-oldprice p {
+  color: #666
+}
+
+.offer-oldprice-container>p {
+  background: rgb(255, 255, 255)
+}
+
+.offer-name-container span {
+  color: #333
+}
+
+.offer-enlarger-infobar {
+  background: rgba(255, 255, 255, .9)
+}
+
+.offer-enlarger-name span {
+  color: #333
+}
+
+.ribbon.radius>div, .offer-ribbon, .offer-enlarger-ribbon {
+  box-shadow: none;
+  background: #189eff
+}
+
+.ribbon .content, .offer-ribbon span, .offer-enlarger-ribbon span {
+  color: #fff;
+  text-shadow: none
+}
+
+.offer-button-wrapper, .offer-enlarger-button {
+  -webkit-box-shadow: 0 2px #a80000;
+  -moz-box-shadow: 0 2px #a80000;
+  box-shadow: 0 2px #a80000;
+  border: 0 solid #000;
+  background: #fc3f3f;
+  background: -o-linear-gradient(top, #fc3f3f, #da1d1d 100%);
+  background: -ms-linear-gradient(top, #fc3f3f, #da1d1d 100%);
+  background: -moz-linear-gradient(top, #fc3f3f, #da1d1d 100%);
+  background: -webkit-linear-gradient(top, #fc3f3f, #da1d1d 100%)
+}
+
+.offer-button-wrapper span, .offer-enlarger-button span {
+  color: #fff;
+  text-shadow: none
+}
+
+.offer-button-wrapper:hover, .offer-enlarger-button:hover {
+  -webkit-box-shadow: 0 2px #a80000;
+  -moz-box-shadow: 0 2px #a80000;
+  box-shadow: 0 2px #a80000;
+  border: 0 solid #b83232;
+  background: #fb6464;
+  background: -o-linear-gradient(top, #fb6464, #e14a4a 100%);
+  background: -ms-linear-gradient(top, #fb6464, #e14a4a 100%);
+  background: -moz-linear-gradient(top, #fb6464, #e14a4a 100%);
+  background: -webkit-linear-gradient(top, #fb6464, #e14a4a 100%)
+}
+
+.offer-button-wrapper:hover span, .offer-enlarger-button:hover span {
+  color: #fff
+}
+
+#offer-enlarger {
+  border: 1px solid #fff
+}
+
+.galler-first-offer-cotainer {
+  border: 1px solid #eee
+}
+
+.offer-small-name-container {
+  color: #333
+}
