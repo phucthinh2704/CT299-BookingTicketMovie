@@ -1,12 +1,29 @@
 .form-control-borderless {
-    border: none;
+	border: none;
 }
 
-.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
-    border: none;
-    outline: none;
-    box-shadow: none;
+.form-control-borderless:hover,
+.form-control-borderless:active,
+.form-control-borderless:focus {
+	border: none;
+	outline: none;
+	box-shadow: none;
 }
-#list-user button{
-    padding: 4px;
+#list-user button {
+	padding: 4px;
+}
+
+.dinfo {
+	max-width: 55%;
+	margin-left: 50px;
+	margin-top: 150px;
+}
+
+.description {
+    height: 270px;               /* Chiều cao cố định của container */  
+    overflow: hidden;           /* Ẩn phần nội dung vượt quá kích thước */  
+    text-overflow: ellipsis;    /* Thêm dấu ba chấm (...) */  
+    display: -webkit-box;       /* Sử dụng flexbox để cắt văn bản */  
+    -webkit-line-clamp: 13;      /* Số dòng hiển thị */  
+    -webkit-box-orient: vertical; /* Định hướng theo chiều dọc */  
 }

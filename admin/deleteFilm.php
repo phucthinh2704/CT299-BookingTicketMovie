@@ -9,8 +9,7 @@
     if (mysqli_query($link, $sql)) {?>
         <script>
             alert("Xóa phim thành công");
-            location.href = "manageUser.php";
-            // alert("hshshsh");
+            location.href = "manageFilm.php";
         </script>
 
     <?php        
@@ -18,5 +17,4 @@
         echo "Lỗi xóa phim: " . mysqli_error($conn);
     }
     mysqli_close($link);
-    
 ?>

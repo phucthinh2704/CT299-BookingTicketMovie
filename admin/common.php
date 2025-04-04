@@ -11,21 +11,15 @@ if (isset($_SESSION['username'])) {
 
 ?>
 
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
 			<a class="navbar-brand" href="index.php">Admin Panel</a>
 		</div>
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul id="active" class="nav navbar-nav side-nav">
+		<div class="collapse navbar-collapse navbar-ex1-collapse" >
+			<ul id="active" class="nav navbar-nav side-nav" >
 				<li>
 					<a href="index.php">
-						<i class="fa fa-bullseye"></i> Dashboard</a>
+						<i class="fa fa-bullseye"></i> Manage</a>
 				</li>
 				<li>
 					<a href="addFilm.php">
@@ -36,33 +30,33 @@ if (isset($_SESSION['username'])) {
 						<i class="fa fa-plus"></i></i> Add Showtime</a>
 				</li>
 				<li>
-					<a href="manageFilm.php">
-						<i class="fa fa-tasks"></i> Manage Film</a>
-				</li>
-				<li>
-					<a href="ManageTicket.php">
-						<i class="fa fa-tasks"></i> Manage Ticket</a>
-				</li>
-				<li>
 					<a href="addUser.php">
 						<i class="fa fa-user-plus"></i> Add User</a>
+				</li>
+				<li>
+					<a href="manageFilm.php">
+						<i class="fa fa-edit"></i> Manage Film</a>
 				</li>
 				<li>
 					<a href="manageUser.php">
 						<i class="fa fa-edit"></i> Manage User</a>
 				</li>
 				<li>
+					<a href="ManageTicket.php">
+						<i class="fa fa-edit"></i> Manage Ticket</a>
+				</li>
+				<li>
 					<a href="../index.php">
 						<i class="fa fa-edit"></i> Home Page</a>
 				</li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right navbar-user">
+			<ul class="nav navbar-nav navbar-right navbar-user" >
 				<li>
 					<form class="navbar-search">
 						<input type="text" placeholder="Search" class="form-control">
 					</form>
 				</li>
-				<li class="divider-vertical"></li>
+				<!-- <li class="divider-vertical" style="background: red"></li> -->
 				<li class="dropdown user-dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="fa fa-user"></i> <?php echo $_SESSION['username']; ?>

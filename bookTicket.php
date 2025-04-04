@@ -13,7 +13,6 @@ try {
         if (empty($film_id) || empty($selected_time) || empty($seats) || empty($user_id)) {
             echo "<script> alert('Đặt vé thất bại.Vui lòng chọn đầy đủ thông tin');
         window.location.href = 'index.php?mod=detail&film_id=$film_id'; </script>";
-            // exit;
 
         } else {  // Lấy mảng ghế ngồi
             $seats = explode(',', $seats); // Convert selected seats into an array

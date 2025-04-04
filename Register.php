@@ -39,7 +39,9 @@ if (isset($_POST["button_update"])) {
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Index</title>
+  <title>Register</title>
+  <link rel="shortcut icon" href="./images/logo_main.png">
+
   <link href="css/owl.carousel.css" type="text/css" rel="stylesheet">
   <script src="js/jquery.min.js" type="text/javascript"></script>
   <script src="js/owl.carousel.js" type="text/javascript"></script>

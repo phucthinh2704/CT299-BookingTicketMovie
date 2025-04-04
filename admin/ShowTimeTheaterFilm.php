@@ -12,15 +12,17 @@ require('libs/db.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete user</title>
-
+    <title>Manage Showtime</title>
+    
+    <link rel="shortcut icon" href="../images/logo_main.png">
     <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="asset/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="asset/css/local.css" />
-    <link rel="stylesheet" type="text/css" href="asset/css/delete.css" />
 
+    
     <script type="text/javascript" src="asset/js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="asset/css/delete.css" />
 </head>
 
 <body>
@@ -67,13 +69,13 @@ require('libs/db.php');
                                 $query = $link->query($sql);
                                 $r2 = $query->fetch_assoc();
                                 ?>
-                                <li>Quốc gia: <a href="?mod=list&type=nation&id=<?php echo $r2['id'] ?>" title="Phim <?php echo $r2['name'] ?>"><?php echo $r2['name'] ?></a></li>
+                                <li>Quốc gia: <a href="../index.php?mod=list&type=nation&id=<?php echo $r2['id'] ?>" title="Phim <?php echo $r2['name'] ?>"><?php echo $r2['name'] ?></a></li>
                                 <li>Thời lượng: <?php echo $r['duration'] ?> Phút</li>
                                 <li>Lượt xem: <?php echo $r['num_view'] ?></li>
                                 <li>Đăng bởi: <?php echo $r['author'] ?></li>
                             </ul>
                         </div>
-                        <div class="detail">
+                        <div class="detail" style="margin-top: 50px;">
                             <div class="content">
                                 <h4>Nội dung phim <?php echo $r['name'] ?>:</h4>
                                 <p><?php echo $r['description'] ?></p>
@@ -85,7 +87,7 @@ require('libs/db.php');
 
                 <!-- danh sách xuất chiếu  -->
                 <div class="listShowTime" style="margin-top:50px;margin-bottom:50px;color:black">
-                    <h2>Danh sách xuất chiếu phim</h2>
+                    <h2>Danh sách suất chiếu phim</h2>
                     <div>
                         <?php
                         $query2 = "SELECT id_film, TIME_FORMAT(time, '%H:%i') AS time, DATE(time) AS day from showtime where id_film = $idFilm";
@@ -107,15 +109,19 @@ require('libs/db.php');
                   -->
                 <div class="createTimeShow" style="margin-bottom:30px">
                     <h2>Thêm suất chiếu mới</h2>
-                    <form method="post">
+                    <form method="post" style="max-width: 50%;">
                         <div>
                             <lable>
                                 <label for="date">Nhập ngày giờ </label>
                                 <br>
-                                <input style="color:black" id="date" type="datetime-local" name="date" required>
+                                <input class="form-control"  style="color:black" id="date" type="datetime-local" name="date" required>
+                                <select class="form-control" style="color:black; margin-top: 10px;" name="screen" id="">
+                                    <option value="1">Rạp 1</option>
+                                    <option value="2">Rạp 2</option>
+                                </select>
                             </lable>
                             <br>
-                            <button type="submit" style="color:black;margin-top:20px">
+                            <button type="submit" class="btn btn-primary" style="color:black;margin-top:20px">
                                 Thêm suất chiếu
 
                             </button>
@@ -130,9 +136,10 @@ require('libs/db.php');
     if (isset($_POST['date'])) {
         try {
             $date = $_POST['date'];
+            $screen = $_POST['screen'];
             $dateFormat = new DateTime($date);
             $dateInsert =  $dateFormat->format('Y-m-d H:i:s');
-            $query = "INSERT INTO showtime set time = '$dateInsert',id_film = $idFilm,id_screens = 1";
+            $query = "INSERT INTO showtime set time = '$dateInsert',id_film = $idFilm,id_screens = $screen";
             $result = mysqli_query($link, $query);
             echo ('<script>
         alert("Thêm suất chiếu thành công");

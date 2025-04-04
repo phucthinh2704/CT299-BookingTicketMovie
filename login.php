@@ -20,7 +20,7 @@ if (isset($_POST["btn_login"])) {
         $result = $link->query($sql);
         if (!$result || ($result->num_rows < 1)) { ?>
             <script>
-                alert("Username không tồn tại");
+                alert("Tài khoản không tồn tại");
                 window.location.href = "Index.php";
             </script>
         <?php
@@ -49,7 +49,6 @@ if (isset($_POST["btn_login"])) {
                 window.location.href = "Index.php";
             </script>
 <?php
-            //header('Location:index.php');
             exit;
         }
     }

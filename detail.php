@@ -5,17 +5,6 @@ $sql = "select f.*, ct.name name_cate from film f, category ct where f.id = '$fi
 $query = $link->query($sql);
 $r = $query->fetch_assoc();
 
-// $sql = "SELECT TIME_FORMAT(time, '%H:%i') AS time FROM showtime";
-// $result = $link->query($sql);
-// $times = [];
-// if ($result->num_rows > 0) {
-//     while ($row = $result->fetch_assoc()) {
-//         $times[] = $row['time'];
-//     }
-// } else {
-//     echo "Không có dữ liệu.";
-// }
-
 $sql = "SELECT date(time) AS time FROM showtime";
 $result = $link->query($sql);
 $days = [];
@@ -26,7 +15,21 @@ if ($result->num_rows > 0) {
 } else {
     echo "Không có dữ liệu.";
 }
-// sort($times);
+/**
+ * Sort an array
+ * @link https://php.net/manual/en/function.sort.php
+ * @param array &$array <p>
+ * The input array.
+ * </p>
+ * @param int $flags <p>
+ * The optional second parameter sort_flags
+ * may be used to modify the sorting behavior using these values.
+ * </p>
+ * <p>
+ * Sorting type flags:<br>
+ * SORT_REGULAR - compare items normally
+ * (don't change types)</p>
+ */
 sort($days);
 
 ?>
@@ -369,6 +372,10 @@ sort($days);
             }
         })
         var thanhtoanDiv = document.getElementById("listTickItem");
+        thanhtoanDiv.innerHTML = ''
+        var costDiv = document.getElementById("cost")
+        costDiv.innerHTML = ''
+        var thanhtoanDivv = document.getElementById("thanhtoan");
         var nameMovie = document.getElementById("nameMovie").innerHTML;
         var seat = document.getElementById("seats").value
         fetch('ThanhToan.php', {
@@ -382,39 +389,42 @@ sort($days);
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
+                // console.log(data)
                 // kiểm tra xem dữ liệu ghế ngồi có null không và suất chiếu đã được chọn hay chưa
                 if (data.seat[0] != '' || timeSelected == '') {
-                    // xóa sạch list vé đang hiển thị trên HTML để tránh việc bấm liên tục vào nút đặt vé sẽ bị chồng thông tin vé lên nhau
                     thanhtoanDiv.innerHTML = ''
                     // giả sử giá 1 vé là 50k
                     var costPerTicket = 50000;
-                    var costDiv = document.getElementById("cost")
-                    var countSeat = data.seat.length
+                    var countSeat = data.seat.length;
                     // tính tổng tiền vé
                     var TotalCost = costPerTicket * countSeat
-                    console.log(TotalCost.toLocaleString())
+                    console.log(data.seat);
                     data.seat.forEach(seat => {
                         const ticketItem = `
-    <div class="cookieCard" style="margin-right:10px">
-        <p class="cookieHeading">Ticket</p>
-        <p class="cookieDescription"><strong style="font-size:20px">${nameMovie}</strong></p>
-        <p>Vị trí ngồi <strong style="color:red">${seat}</strong></p>
-        <p>Suất chiếu <strong style="color:red">${timeSelected}</strong></p>
-    </div>
-   
-`;
+                            <div class="cookieCard" style="margin-right:10px">
+                                <p class="cookieHeading">Ticket</p>
+                                <p class="cookieDescription"><strong style="font-size:20px">${nameMovie}</strong></p>
+                                <p>Vị trí ngồi <strong style="color:red">${seat}</strong></p>
+                                <p>Suất chiếu <strong style="color:red">${timeSelected}</strong></p>
+                            </div>`;
                         thanhtoanDiv.insertAdjacentHTML('afterBegin', ticketItem);
                     })
-                    const costItem = `<h2>Thành tiền: <strong style="color:red">${TotalCost.toLocaleString()}</strong> VND</h2>
-                    <h3>Qúy khách vui lòng thanh toán chuyển khoản vào số tài khoản sau</h3>
-                    <p><strong>Số tài khoản: 0123456789</strong></p>
-                    <p><strong>Ngân hàng: Mbbank</strong></p>
+                    const costItem = `
+                        <h2>Thành tiền: <strong style="color:red">${TotalCost.toLocaleString()}</strong> VND</h2>
+                        <h2>Quý khách vui lòng thanh toán chuyển khoản vào số tài khoản sau</h2>
+                        <h2><strong>Số tài khoản: 9916660387</strong></h2>
+                        <h2><strong>Ngân hàng: Vietcombank</strong></h2>
+                        <img src='https://img.vietqr.io/image/vietcombank-9916660387-print.jpg?amount=${TotalCost}&addInfo=<?php echo $_SESSION["username"] . " THANH TOAN TIEN VE" ?>'/>
                     `
                     costDiv.innerHTML = ''
                     costDiv.insertAdjacentHTML('afterBegin', costItem)
+                } else {
+                    // var thanhtoanDivv = document.getElementById("thanhtoan");
+                    if(thanhtoanDivv.style.display === "block"){
+                        alert("Hãy chọn đầy đủ thông tin")
+                        thanhtoanDivv.style.display = "none";
+                    }
                 }
-
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -458,6 +468,7 @@ sort($days);
             });
         document.getElementById("selected_time").value = button.value;
     }
+
     var seats = document.getElementsByClassName("seat");
     for (let i = 0; i < seats.length; i++) {
         seats[i].addEventListener("click", (e) => {
@@ -465,10 +476,10 @@ sort($days);
             seats[i].classList.toggle("selected");
             var selectedSeats = [];
             document.querySelectorAll('.seat.selected').forEach(function(seat) {
-                selectedSeats.push(seat.value);
+                if (!seat.classList.contains("reserved"))
+                    selectedSeats.push(seat.value);
             });
             document.getElementById("seats").value = selectedSeats.join(",");
-
         });
     }
 </script>

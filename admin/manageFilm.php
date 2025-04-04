@@ -72,10 +72,11 @@ require('libs/db.php');
                                         <th> <img style="width: 200px;" src="<?php echo "../images/" . $row["image"] ?>" /> </th>
                                         <th> <?php echo $row["director"] ?> </th>
                                         <th> <?php echo $row["actor"] ?> </th>
-                                        <th> <?php echo $row["description"] ?> </th>
+                                        <th class="description"> <?php echo $row["description"] ?> </th>
                                         <td>
-                                            <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Edit</button>
-                                            <button type="button" class="btn btn-danger" name="delete" onclick="del(this)">Delete</button>
+                                            <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Sửa</button>
+                                            <button type="button" class="btn btn-danger" name="delete" onclick="del(this)" style="margin-left: 20px;">Xóa</button>
+                                            <a href="ShowTimeTheaterFilm.php?film_id=<?php echo $row["id"]?>" type="button" class="btn btn-success" style="text-decoration: none;">Thêm suất chiếu</a>
                                         </td>
                                     </tr>
                             <?php
@@ -136,10 +137,11 @@ require('libs/db.php');
                                             <th> <img style="width: 200px;" src="<?php echo "../images/" . $row["image"] ?>" /> </th>
                                             <th> <?php echo $row["director"] ?> </th>
                                             <th> <?php echo $row["actor"] ?> </th>
-                                            <th> <?php echo $row["description"] ?> </th>
+                                            <th class="description"> <?php echo $row["description"] ?> </th>
                                             <td>
-                                                <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Edit</button>
-                                                <button type="button" class="btn btn-danger" name="delete" onclick="del(this)">Delete</button>
+                                                <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Sửa</button>
+                                                <button type="button" class="btn btn-danger" name="delete" onclick="del(this)" style="margin-left: 20px;">Xóa</button>
+                                                <a href="ShowTimeTheaterFilm.php?film_id=<?php echo $row["id"]?>" type="button" class="btn btn-success" style="text-decoration: none;">Thêm suất chiếu</a>
                                             </td>
                                         </tr>
                             <?php
