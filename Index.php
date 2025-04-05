@@ -95,7 +95,12 @@ $mod = '';
     <?php
     include("footer.php");
     ?>
-
+    <script
+      src="https://app.preny.ai/embed-global.js"
+      data-button-style="width:200px;height:200px"
+      async
+      defer
+      data-preny-bot-id="67f146062da110945e8c0d79"></script>
   </div>
 
 </html>
